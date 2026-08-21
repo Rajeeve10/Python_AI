@@ -10,26 +10,26 @@ def Random_Guess():
     
     while True:
         try:
-            guess=int(input("Enter your number you have  guesed - "))
+            guess=int(input("Enter your number you have  guesed - ")) # guessing the number and converting it to integer
             
             
             if guess<1 or guess >100:
-                print("Please guess a number between 1 and 100")
+                print("Please guess a number between 1 and 100")  #validating the input number to be between 1 and 100
                 
             elif guess < number:
-                print ("Wrong answer... Too low")
+                print ("Wrong answer... Too low")   #checking if the guessed number is less than the generated number and printing the message accordingly
             elif guess > number:
-                print ("Wrong answer... Too High")   
+                print ("Wrong answer... Too High")   #checking if the guessed number is greater than the generated number and printing the message accordingly
             else:
                 endtime=time.perf_counter()  # to calculate the end time to guess the nulmer
                 timeTaken=endtime -  start_time   # this is the time taken from start to end to guess the number to check how fast it took to guess the number.
-                print("The number " + str(number)+ " guesed was correct" )
-                print(f"time taken :{timeTaken} seconds" )
+                print("The number " + str(number)+ " guesed was correct" ) #ethe number guessed was correct and printing the message accordingly
+                print(f"time taken :{timeTaken} seconds" ) # time taken to guess the number and printing the message accordingly
                 break
                 
         except ValueError:
-               print ("Invalid input please try again")
+               print ("Invalid input please try again") #validating the input number to be integer and printing the message accordingly
                
     
-Random_Guess()
+Random_Guess() #calling the function to run the code
             
